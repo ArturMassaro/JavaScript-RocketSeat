@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Exercicio 2</title>
+    </head>
+    <body>
+        <div class="app">
+            <button id="btnCotainer"> Criar Box</button>
+        </div>
+        
+        <script>
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            
+
+
+            var btn = document.querySelector('button#btnCotainer');
+            console.log(btn);
+            btn.onclick = function() {
+                console.log('click');
+                var div = document.querySelector('.app');
+
+                var box = document.createElement('div');
+
+                box.style.width = 100;
+                box.style.height = 100;
+                box.style.backgroundColor = '#f00';
+
+                box.onmouseover = function() {
+                    var newColor = getRandomColor(); // #E943F0
+                    box.style.backgroundColor = newColor;
+
+                }
+
+                div.appendChild(box);
+            }
+            
+
+        </script>
+    </body>
+</html>

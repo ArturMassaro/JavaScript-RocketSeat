@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Exercicio 1</title>
+    </head>
+    <body>
+
+        <div class="app">
+            <button id="btnCotainer"> Criar Box</button>
+        </div>
+        
+        <script>
+            var btn = document.querySelector('button#btnCotainer');
+            console.log(btn);
+            btn.onclick = function() {
+                console.log('click');
+                var div = document.querySelector('.app');
+
+                var box = document.createElement('div');
+
+                box.style.width = 100;
+                box.style.height = 100;
+                box.style.backgroundColor = '#f00';
+
+                div.appendChild(box);
+            }
+            
+
+        </script>
+
+    </body>
+</html>
